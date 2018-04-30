@@ -1,0 +1,23 @@
+.navbar__list
+    display: flex;
+    align-items: center;
+    li
+        &:nth-last-of-type(1n+2)::after
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            vertical-align: 2px;
+            background-color: #fff;
+            border-radius: 50%;
+    a
+        display: inline-block;
+        margin: 0 15px;
+        font: 13.3px / 30px ubuntuMed;
+        text-transform: uppercase;
+        color: #fff;
+        &:hover
+            text-decoration: underline;
+
+.navbar__close
+    display: none;

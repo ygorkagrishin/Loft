@@ -1,0 +1,186 @@
+.caro__slide
+    @media screen and ( max-width 1024px )
+        flex-direction: column;
+        padding: 0;
+        padding-top: 10%;
+    @media screen and ( max-width 800px )
+        @extend .sect__cont;
+    @media screen and ( max-width 540px )
+        padding: 27% 0 8% 0;
+    @media screen and ( max-width 345px ) and ( max-height 500px )
+        padding: 20% 0 3% 0;
+
+.caro__pic,
+.caro__desc
+    @media screen and ( max-width 1024px )
+        width: 75%;
+    @media screen and ( max-width 540px )
+        width: 95%;
+    @media screen and ( max-width 425px )
+        width: 100%;
+
+.caro__pic
+    img 
+        @media screen and ( max-width 1024px )
+            width: 90%;
+        @media screen and ( max-width 425px )
+            width: 80%;
+
+.caro__desc
+    @media screen and ( max-width 1024px )
+        align-self: center;
+        padding: 0;
+        text-align: center;
+    @media screen and (max-width 425px)
+        padding: 0 2.5%;
+    h3
+        @media screen and ( max-width 1024px )
+            margin: 3% 0;
+        @media screen and ( max-width 540px )
+            width: 85%;
+            margin: 1% auto 3% auto;
+            font-size: 50px;
+            line-height: 60px;
+        @media screen and ( max-width 425px )
+            width: 100%;
+            margin: 5% 0 3% 0;
+            font-size: 42px;
+            line-height: 52px;
+        @media screen and ( max-width 345px )
+            margin: 7% 0 3% 0;
+            font-size: 32px;
+            line-height: 1;
+    p
+        @media screen and ( max-width 345px ) and ( max-height 500px )
+            font-size: 11px;
+            line-height: 21px;
+
+.caro__other
+    @media screen and ( max-width 1024px )
+        justify-content: center;
+        margin-top: 6%;
+    @media screen and ( max-width 540px )
+        margin-top: 3%;
+    @media screen and ( max-width 345px )
+        margin-top: 5%;
+    @media screen and ( max-width 345px ) and ( max-height 500px )
+        margin-top: 5%;
+
+.caro__price
+    @media screen and ( max-width 540px )
+        margin-right: 6%;
+        font-size: 24px;
+        line-height: 1;
+    @media screen and ( max-width 345px )
+        font-size: 18px;
+    span
+        @media screen and ( max-width 540px )
+            font-size: 50px;
+        @media screen and ( max-width 345px )
+            font-size: 32px;
+
+.caro__comp
+    @media screen and ( max-width 1024px )
+        top: 0;
+        left: 18.5%;
+    @media screen and ( max-width 540px )
+        top: 2.5%;
+        left: .7%;
+    @media screen and ( max-width 425px )
+        top: 0;
+        width: 55px;
+        height: 55px;
+        padding: 2%;
+    & > p
+        @media screen and ( max-width 425px )
+            display: none;
+    svg
+        @media screen and ( max-width 425px )
+            width: 100% !important;
+
+.caro__list
+    @media screen and ( max-width 1024px )
+        width: 320px;
+        padding: 20% 23%;
+    @media screen and ( max-width 540px )
+        width: 372px;
+    @media screen and ( max-width 475px )
+        top: 100%;
+        left: 0;
+    @media screen and ( max-width 425px )
+        width: 320px;
+    @media screen and ( max-width 345px )
+        width: 290px;
+
+.caro__comp-wrap
+    @media screen and ( max-width 1024px )
+        padding-right: 13%;
+    @media screen and ( max-width 540px )
+        padding-right: 26%;
+    @media screen and ( max-width 425px )
+        padding-right: 15%;
+
+.caro__item
+    &:not(:last-child)
+        margin-bottom: 2%;
+
+.caro__comp-close
+    @media screen and ( max-width 1024px )
+        display: block;
+
+.caro__kkal
+    @media screen and ( max-width 1024px )
+        top: -2%;
+        right: 16.5%;
+        bottom: auto;
+        left: auto;
+    @media screen and ( max-width 540px )
+        top: .5%;
+        right: -2%;
+    @media screen and ( max-width 425px )
+        top: -1%;
+        right: -3%;
+        width: 70px;
+        height: 70px;
+        padding: 4%;
+    & > p
+        @media screen and ( max-width 425px )
+            display: none;
+    svg
+        @media screen and ( max-width 425px )
+            width: 100% !important;
+            height: auto !important;
+    span 
+        @media screen and ( max-width 425px )
+            top: 34px;
+            left: 24px;
+            font-size: 14px;  
+
+.caro__arrow
+    @media screen and ( max-width 540px )
+        top: 45.5%;
+    svg
+        @media screen and ( max-width 425px )
+            width: 60% !important;
+
+.caro__next
+    @media screen and ( max-width 1024px )
+        right: 3.5%;
+    @media screen and ( max-width 540px )
+        right: -.5%;
+
+.caro__prev
+    @media screen and ( max-width 1024px )
+        left: 3.5%;
+    @media screen and ( max-width 540px )
+        left: -.5%;
+    @media screen and ( max-width 425px )
+        top: 48.2%;
+
+.js-arrow-prev,
+.js-arrow-next
+    @media screen and ( max-width 540px )
+        top: -90%;
+    @media screen and ( max-width 425px )
+        top: -100%;
+        left: -55%;

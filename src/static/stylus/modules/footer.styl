@@ -1,0 +1,47 @@
+.footer
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    background: no-repeat center / cover;
+
+.footer
+    padding: 4px 10px;
+
+.footer__row
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+.footer__address
+    color: #fff;
+
+.footer__phone
+    display: inline-block;
+    margin-left: 9px;
+    font-family: ubuntuBold;
+    color: primaryOrange;
+
+.footer__social
+    display: flex;
+    align-items: center;
+    li
+        position: relative;
+        z-index: 2;
+        opacity: .7;
+        &:not(:last-child)
+            margin-right: 19px;
+        & > a 
+            /* Юный падаван не умеет верстать как мастер джедай */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        &:hover
+            opacity: 1;
+        

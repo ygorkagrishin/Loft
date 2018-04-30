@@ -1,0 +1,22 @@
+.sect__title
+    @media screen and ( max-width 800px ) and ( orientation landscape )
+        font-size: 50px;
+        line-height: 1;
+    @media screen and ( max-width 540px )
+        font-size: 50px;
+        line-height: 60px;
+    @media screen and ( max-width 375px )
+        font-size: 42px;
+        line-height: 52px;
+
+.btn__order
+    @media screen and ( max-width 375px )
+        padding: 9px 14px 11px 14px;
+        font-size: 11px;
+
+.btn__more,
+.btn__clear
+    @media screen and ( max-width 375px )
+        @extend .btn__order;
+    @media screen and ( max-width 345px )
+        font-size: 10px;

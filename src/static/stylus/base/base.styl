@@ -1,0 +1,38 @@
+.sect__title
+    font: 72px / 64px gagalinReg;
+
+.btn__order
+    hoverBtn = #c1401e;
+
+    display: inline-block;
+    padding: 11px 16px 11px 16px;;
+    font: 13px / 1 ubuntuMed;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: primaryOrange;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover
+        background-color: hoverBtn;
+
+.btn__more
+    hoverBtn = #1f2122;
+
+    @extend .btn__order
+    padding: 10px 15px 10px 15px;
+    background-color: primaryBlack;
+    border-radius: 5px;
+    &:hover
+        background-color: hoverBtn;
+
+.btn__clear
+    @extend .btn__more;
+    padding: 10px 18px 10px 18px;
+    font: 14px / 1 ubuntuLight;
+    text-transform: none;
+    background-color: transparent;
+    color: rgba(255,255,255,.7);
+    &:hover
+        background-color: transparent;
+        color: #fff;

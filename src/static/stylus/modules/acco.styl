@@ -1,0 +1,53 @@
+.acco
+    color: #fff;
+
+.acco__sect
+    margin-bottom: 22px;
+
+.acco__name
+    font: 14px / 28px gagalinReg;
+    cursor: pointer;
+    .acco__arrow
+        margin-right: 10px;
+        will-change: transform;
+        transition: all .5s;
+
+.js-acco-box
+    height: 0;
+    overflow: hidden;
+    transition: all .5s;
+
+.acco__cont
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+
+.acco__border
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    img[alt="ava"]
+        width: 100%;
+        transform: scale(1.3) translate(-2px,9px);
+
+.acco__desc
+    /* 
+        Only IE10 
+     */
+    flex: 1;
+    /* 
+        **************
+     */
+    padding: 0 19px;
+    h4
+        margin-bottom: 15px;
+        font: 14px / 1 ubuntuBold;
+
+.acco__sect.active
+    .acco__name
+        color: primaryYellow;
+        .acco__arrow
+            transform: rotate(-180deg);
+
+

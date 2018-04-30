@@ -1,0 +1,443 @@
+extends ../layout/main.pug
+
+block title
+    | LoftSchool 
+
+block content
+    #preloader
+        p.preloader__status 
+            | Жарим бургер ...
+    main.page__main
+        #js-container   
+            // Hero section
+            section.hero.sect#hero(data-src="image/content/hero/video-bg.png")
+                article.container
+                    .hero__header
+                        include ../modules/header
+                    .hero__main
+                        .hero__pic
+                            img(src="image/content/hero/steam.png", alt="burger").hero__helper
+                            svg(width="450.527px", height="241.369px").hero__drops
+                                use(xlink:href="#drops")
+                            //- object(data="image/svg/drops.svg", type="image/svg+xml").hero__drops
+                        .hero__desc
+                            h1.sect__title.hero__title
+                                | Мы делаем
+                                <br>
+                                span натуральные бургеры
+                    .hero__arrow
+                        svg(width="28.685px", height="14.479px")
+                            use(xlink:href="#arrow-scroll")
+                        //- object(data="image/svg/arrow-scroll.svg", type="image/svg+xml", style="display: none;")
+            // Hero section end
+
+            // We section
+            section.we.sect#we(data-src="image/content/we/bg1.png")
+                article.container
+                    .sect__cont
+                        h2.sect__title.we__title Мы лучшие
+                        ul.we__list
+
+                            // Meat
+                            li.we__item.we__meat
+                                .we__pic
+                                    svg(width="96.428px", height="89.246px")
+                                        use(xlink:href="#meat")
+                                    //- object(data="image/svg/meat.svg", type="image/svg+xml")
+                                .we__desc
+                                    h3 100% свежее мясо
+                                    p   
+                                        | Драма представляет собой деструктивный цикл. 
+                                        | Анапест представляет собой анапест. Ямб неравномерен.
+                            // Meat end
+                            
+                            // Hand 
+                            li.we__item.we__hand
+                                .we__pic
+                                    svg(width="73px", height="85.875px")
+                                        use(xlink:href="#hand")
+                                    //- object(data="image/svg/hand.svg", type="image/svg+xml")
+                                .we__desc
+                                    h3 Ручная сборка
+                                    p
+                                        | Драма представляет собой деструктивный цикл. 
+                                        | Анапест представляет собой анапест. 
+                                        | Первое полустишие притягивает сюжетный реформаторский пафос.
+                            // Hand end
+                            
+                            // Natural
+                            li.we__item.we__natural
+                                .we__pic
+                                    svg(width="88px", height="75.534px")
+                                        use(xlink:href="#natural")
+                                    //- object(data="image/svg/natural.svg", type="image/svg+xml")
+                                .we__desc
+                                    h3 Натуральные ингредиенты 
+                                    p
+                                        | Драма представляет собой деструктивный цикл. 
+                                        | Анапест представляет собой анапест.
+                            // Natural end
+            // We section end
+
+            // Burger scetion > carousel        
+            section.burger.sect#burger
+                .container
+                    .burger__wrap
+                        include ../modules/carousel
+            // Burger section end
+
+            // Team section > acco
+            section.team.sect#team(data-src="image/content/team/SBS_1255-X2.png")
+                .team__row
+                    .team__wrap
+                        h2.sect__title.team__title Команда
+                        include ../modules/acco
+            // Team section
+
+            // Menu section > hor-acco
+            section.menu.sect#menu(data-src="image/content/menu/photo-1428660386617-8d277e7deaf2.png")
+                h2.sect__title.menu__title Меню
+                include ../modules/hor-acco
+            // Menu section end
+
+            // Review section
+            section.review.sect#review
+                ul.review__reviews
+                    // review-1
+                    li.review__review.js-lazy-image(data-src="image/content/review/photo-1458890715264-db84f7c6ef13.png")
+                        .review__hover
+                            h3 Константин Спилберг
+                            p
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            .reivew__btn
+                                a(href="javascript:void(0);", data-popup="#popup_1").btn__more.js-popup.btn__more_phone_none Подробнее
+                                a(href="javascript:void(0);", data-popup="#popup_1").btn__more.js-popup.btn__more_desktop_none Читать отзыв
+
+                    .review__popup#popup_1
+                        div
+                            h4 Константин Спилберг
+                            p
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            .review__popup-close
+                                img(src="image/general/close.png", alt="close")
+                                .js-popup-close
+
+                    // review-1 end  
+
+                    // review-2
+                    li.review__review.js-lazy-image(data-src="image/content/review/photo-1440606797942-6cc04c045447.png")
+                        .review__hover
+                            h3 Константин Спилберг
+                            p
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            .reivew__btn
+                                a(href="javascript:void(0);", data-popup="#popup_2").btn__more.js-popup.btn__more_phone_none Подробнее
+                                a(href="javascript:void(0);", data-popup="#popup_2").btn__more.js-popup.btn__more_desktop_none Читать отзыв
+                    
+                    .review__popup#popup_2
+                        div
+                            h4 Константин Спилберг
+                            p
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            .review__popup-close
+                                img(src="image/general/close.png", alt="close")
+                                .js-popup-close
+
+                    // review-2 end  
+
+                    // review-3
+                    li.review__review.js-lazy-image(data-src="image/content/review/photo-1445404590072-16ef9c18bd83.png")
+                        .review__hover
+                            h3 Константин Спилберг
+                            p
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            .reivew__btn
+                                a(href="javascript:void(0);", data-popup="#popup_3").btn__more.js-popup.btn__more_phone_none Подробнее
+                                a(href="javascript:void(0);", data-popup="#popup_3").btn__more.js-popup.btn__more_desktop_none Читать отзыв
+
+                    .review__popup#popup_3
+                        div
+                            h4 Константин Спилберг
+                            p
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            .review__popup-close
+                                img(src="image/general/close.png", alt="close")
+                                .js-popup-close
+
+                    // review-3 end  
+
+                    // review-4
+                    li.review__review.js-lazy-image(data-src="image/content/review/photo-1468546818829-25bb337b6646.png")
+                        .review__hover
+                            h3 Константин Спилберг
+                            p
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            .reivew__btn
+                                a(href="javascript:void(0);", data-popup="#popup_4").btn__more.js-popup.btn__more_phone_none Подробнее
+                                a(href="javascript:void(0);", data-popup="#popup_4").btn__more.js-popup.btn__more_desktop_none Читать отзыв
+                    
+                    .review__popup#popup_4
+                        div
+                            h4 Константин Спилберг
+                            p
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            .review__popup-close
+                                img(src="image/general/close.png", alt="close")
+                                .js-popup-close
+
+                    // review-4 end  
+
+                    // review-5
+                    li.review__review.js-lazy-image(data-src="image/content/review/photo-1438763298591-75a0d42b7265.png")
+                        .review__hover
+                            h3 Константин Спилберг
+                            p
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            .reivew__btn
+                                a(href="javascript:void(0);", data-popup="#popup_5").btn__more.js-popup.btn__more_phone_none Подробнее
+                                a(href="javascript:void(0);", data-popup="#popup_5").btn__more.js-popup.btn__more_desktop_none Читать отзыв
+
+                    .review__popup#popup_5
+                        div
+                            h4 Константин Спилберг
+                            p
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            .review__popup-close
+                                img(src="image/general/close.png", alt="close")
+                                .js-popup-close
+
+                    // review-5 end  
+
+                    // review-6
+                    li.review__review.js-lazy-image(data-src="image/content/review/photo-1461332682233-b818af4c3a6e.png")
+                        .review__hover
+                            h3 Константин Спилберг
+                            p
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            .reivew__btn
+                                a(href="javascript:void(0);", data-popup="#popup_6").btn__more.js-popup.btn__more_phone_none Подробнее
+                                a(href="javascript:void(0);", data-popup="#popup_6").btn__more.js-popup.btn__more_desktop_none Читать отзыв
+
+                    .review__popup#popup_6
+                        div
+                            h4 Константин Спилберг
+                            p
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            .review__popup-close
+                                img(src="image/general/close.png", alt="close")
+                                .js-popup-close
+
+                    // review-6 end  
+
+                    // review-7
+                    li.review__review.js-lazy-image(data-src="image/content/review/photo-1457706924510-773f3c796de3.png")
+                        .review__hover
+                            h3 Константин Спилберг
+                            p
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            .reivew__btn
+                                a(href="javascript:void(0);", data-popup="#popup_7").btn__more.js-popup.btn__more_phone_none Подробнее
+                                a(href="javascript:void(0);", data-popup="#popup_7").btn__more.js-popup.btn__more_desktop_none Читать отзыв
+
+                    .review__popup#popup_7
+                        div
+                            h4 Константин Спилберг
+                            p
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            .review__popup-close
+                                img(src="image/general/close.png", alt="close")
+                                .js-popup-close
+
+                    // review-7 end  
+
+                    // review-8
+                    li.review__review.js-lazy-image(data-src="image/content/review/photo-1458696765561-12142eaead131.png")
+                        .review__hover
+                            h3 Константин Спилберг
+                            p
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            .reivew__btn
+                                a(href="javascript:void(0);", data-popup="#popup_8").btn__more.js-popup.btn__more_phone_none Подробнее
+                                a(href="javascript:void(0);", data-popup="#popup_8").btn__more.js-popup.btn__more_desktop_none Читать отзыв
+
+                    .review__popup#popup_8
+                        div
+                            h4 Константин Спилберг
+                            p
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                                | Мысли все о них и о них, о них и о них. Нельзя устоять, 
+                                | невозможно забыть... Никогда не думал, 
+                                | что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            .review__popup-close
+                                img(src="image/general/close.png", alt="close")
+                                .js-popup-close
+
+                    // review-8 end  
+            // Review section end
+
+            // Form section 
+            section.form.sect#form(data-src="image/content/form/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.png")
+                article.container
+                    .sect__cont                    
+                        h2.sect__title.form__title Закажите доставку
+                        // Form 
+                        form.form__form#form(action="action.php", method="post")
+                            .form__row
+                                ul.form__col.form__col_size_m
+                                    li.form__row
+                                        .form__col.form__col_size_m
+                                            div.form__name
+                                                label(for="name") Имя
+                                            input(type="text", name="name", id="name").form__input
+                                        .form__col.form__col_size_m
+                                            div.form__name
+                                                label(for="phone") Телефон
+                                            input(type="text", name="phone", id="phone").form__input
+                                    li.form__row    
+                                        .form__col.form__col_size_l
+                                            div.form__name
+                                                label(for="street") Улица
+                                            input(type="text", name="street", id="street").form__input
+                                    li.form__row
+                                        .form__col.form__col_size_s
+                                            div.form__name
+                                                label(for="house") Дом
+                                            input(type="text", name="house", id="house").form__input
+                                        .form__col.form__col_size_s
+                                            div.form__name
+                                                label(for="build") Корпус
+                                            input(type="text", name="build", id="build").form__input
+                                        .form__col.form__col_size_s
+                                            div.form__name
+                                                label(for="flat") Квартира
+                                            input(type="text", name="flat", id="flat").form__input
+                                        .form__col.form__col_size_s.form__col_mobile_none
+                                            div.form__name
+                                                label(for="floor") Этаж
+                                            input(type="text", name="floor", id="floor").form__input
+                                ul.form__col.form__col_size_m
+                                    li.form__row.form__row_el_comment
+                                        .form__col.form__col_size_l
+                                            div.form__name
+                                                label(for="comment") Комментарий
+                                            textarea(name="comment", rows="6", id="comment").form__input.form__comment
+                                    li.form__row.form__row_el_radio
+                                        div
+                                            input(type="radio", name="radio", id="cash", value="1").form__radio
+                                            label(for="cash").form__name Потребуется сдача
+                                        div
+                                            input(type="radio", name="radio", id="card", value="2").form__radio
+                                            label(for="card").form__name Оплата по карте
+                                    li.form__row.form__row_el_checkbox
+                                        div
+                                            input(type="checkbox", name="call", id="call").form__checkbox
+                                            label(for="call").form__name Не перезванивать
+                            .form__row
+                                .form__col.form__col_size_m.form__col_type_empty
+                                .form__col_size_m
+                                    .form__row.form__btn
+                                        div
+                                            button(type="submit").btn__order Заказать
+                                        div
+                                            button(type="reset").btn__clear Очистить
+                            .form__answer
+                                div.form__answer-cont
+                                    p Сообщение отправлено 
+                                    a(href="javascript:void(0);").btn__order.form__answer-close Закрыть
+                        // Form end
+            // Form section end
+
+            // Cont section > map
+            section.cont.sect#cont
+                .cont__map#map  
+                // Footer
+                include ../modules/footer
+                // Footer end
+            // Cont section end
+        ul.js-nav
+            each data in ['hero', 'we', 'burger', 'team', 'menu', 'review', 'form', 'cont']
+                li 
+                    a(href='javascript:void(0);', data-anchor=data)
+        
+    .page__landscape-err
+        p   
+            | Пожалуйста верните телефон в вертикальное положение
+
+    script( src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" )
