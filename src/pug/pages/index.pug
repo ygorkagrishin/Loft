@@ -360,58 +360,58 @@ block content
                         // Form 
                         form.form__form#form(action="action.php", method="post")
                             .form__row
-                                ul.form__col.form__col_size_m
+                                ul.form__col
                                     li.form__row
-                                        .form__col.form__col_size_m
+                                        .form__col
                                             div.form__name
                                                 label(for="name") Имя
                                             input(type="text", name="name", id="name").form__input
-                                        .form__col.form__col_size_m
+                                        .form__col
                                             div.form__name
                                                 label(for="phone") Телефон
                                             input(type="text", name="phone", id="phone").form__input
                                     li.form__row    
-                                        .form__col.form__col_size_l
+                                        .form__col
                                             div.form__name
                                                 label(for="street") Улица
                                             input(type="text", name="street", id="street").form__input
                                     li.form__row
-                                        .form__col.form__col_size_s
+                                        .form__col
                                             div.form__name
                                                 label(for="house") Дом
                                             input(type="text", name="house", id="house").form__input
-                                        .form__col.form__col_size_s
+                                        .form__col
                                             div.form__name
                                                 label(for="build") Корпус
                                             input(type="text", name="build", id="build").form__input
-                                        .form__col.form__col_size_s
+                                        .form__col.form__helper
                                             div.form__name
                                                 label(for="flat") Квартира
                                             input(type="text", name="flat", id="flat").form__input
-                                        .form__col.form__col_size_s.form__col_mobile_none
+                                        .form__col.form__col--mobile
                                             div.form__name
                                                 label(for="floor") Этаж
                                             input(type="text", name="floor", id="floor").form__input
-                                ul.form__col.form__col_size_m
-                                    li.form__row.form__row_el_comment
-                                        .form__col.form__col_size_l
+                                ul.form__col
+                                    li.form__row.form__row--comment
+                                        .form__col
                                             div.form__name
                                                 label(for="comment") Комментарий
                                             textarea(name="comment", rows="6", id="comment").form__input.form__comment
-                                    li.form__row.form__row_el_radio
+                                    li.form__row.form__row--radio
                                         div
                                             input(type="radio", name="radio", id="cash", value="1").form__radio
                                             label(for="cash").form__name Потребуется сдача
                                         div
                                             input(type="radio", name="radio", id="card", value="2").form__radio
                                             label(for="card").form__name Оплата по карте
-                                    li.form__row.form__row_el_checkbox
+                                    li.form__row.form__row--checkbox
                                         div
                                             input(type="checkbox", name="call", id="call").form__checkbox
                                             label(for="call").form__name Не перезванивать
                             .form__row
-                                .form__col.form__col_size_m.form__col_type_empty
-                                .form__col_size_m
+                                .form__col.form__col--empty
+                                .form__col
                                     .form__row.form__btn
                                         div
                                             button(type="submit").btn__order Заказать

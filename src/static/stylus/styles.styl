@@ -337,17 +337,9 @@
         margin-bottom: 14px;
 
 .form__col
+    flex: 1;
     &:not(:last-child)
         margin-right: 18px;
-
-.form__col_size_l
-    width: 100%;
-
-.form__col_size_m
-    width: 50%;
-    
-.form__col_size_s
-    width: 25%;
 
 .form__name
     margin-bottom: 2px;
@@ -360,19 +352,19 @@
     border-radius: 5px;
     outline-color: primaryYellow;
 
-.form__row_el_comment
+.form__row--comment
     margin-bottom: 7px !important;
 
 .form__comment
     padding: 7px 21px 6px 21px;
 
-.form__row_el_radio,
-.form__row_el_checkbox
+.form__row--radio,
+.form__row--checkbox
     justify-content: flex-start;
     & > div:not(:last-child)
         margin-right: 20px; 
 
-.form__row_el_radio
+.form__row--radio
     margin-bottom: 18px !important;
 
 .form__radio,
@@ -399,9 +391,10 @@
 
 .form__checkbox:checked + label::before
     background: #fff url('image/content/form/w128h1281338911632checkmark21.png') no-repeat center / 68%;
-    
-.form__btn
-    justify-content: flex-start;
+
+.form__row    
+    .form__btn
+        justify-content: flex-start;
 
 .form__answer
     position: absolute;

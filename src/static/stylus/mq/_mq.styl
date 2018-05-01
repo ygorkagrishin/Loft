@@ -305,7 +305,7 @@
         /* Основные колонки */
         & > .form__col
             @media screen and ( max-width 1024px )
-                width: 100%;
+                // width: 100%;
                 &:not(:last-child)
                     margin: 0;
                     margin-bottom: 3%;
@@ -326,38 +326,26 @@
     @media screen and ( max-width 540px )
         margin-right: 0;
 
-.form__col_size_s
-    @media screen and ( max-width 540px )
-        width: 32%;
-
-.form__col_mobile_none
+.form__col--mobile
     @media screen and ( max-width 540px )
         display: none;
 
-.form__row_el_comment
+.form__row--comment
     @media screen and ( max-width 540px )
         margin-bottom: 6.5% !important;
     @media screen and ( max-width 345px ) and ( max-height 500px )
         margin-bottom: 4.5% !important;
 
-.form__row_el_radio,
-.form__row_el_checkbox
+.form__row--radio,
+.form__row--checkbox
     @media screen and ( max-width 540px )
         justify-content: center;
 
-.form__row_el_radio
+.form__row--radio
     @media screen and ( max-width 540px )
         margin-bottom: 6% !important;
     @media screen and ( max-width 345px ) and ( max-height 500px )
         margin-bottom: 3% !important;
-
-.form__form
-    .form__row:last-child
-        .form__col_size_m
-            @media screen and ( max-width 540px )
-                width: 100%;
-                .form__btn
-                    justify-content: center;
 
 .form__input
     @media screen and ( max-width 375px )
@@ -374,6 +362,15 @@
     @media screen and ( max-width 425px )
         p
             margin-bottom: 10px;
+
+.form__row
+    .form__btn
+        @media screen and ( max-width 540px )
+            justify-content: center;
+
+.form__helper
+    @media screen and (max-width 540px)
+        margin: 0 !important;
 
 /* **************************** */
 // Form end
