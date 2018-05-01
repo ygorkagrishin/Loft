@@ -91,7 +91,7 @@ gulp.task('watch', () => {
     gulp.watch(path.watch.fonts, gulp.series('fonts'))
     gulp.watch(path.watch.script, gulp.series('js'))
     gulp.watch(path.watch.php, gulp.series('php'))
-    gulp.watch(path.watch.php, gulp.series('svg:build'))
+    gulp.watch(path.watch.svg, gulp.series('svg:build'))
 });
 
 gulp.task('default', gulp.parallel(gulp.series('pug', 'fonts', 'styl', 'img', 'svg:build', 'js', 'php'), 'watch'));

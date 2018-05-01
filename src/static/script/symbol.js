@@ -1,8 +1,8 @@
-;( function( window, document )
+( function( window, document )
 {
 	'use strict';
 
-	var file     = 'svg/symbols.svg',
+	var file = 'svg/symbols.svg',
 		revision = 1;
 
 	if( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )

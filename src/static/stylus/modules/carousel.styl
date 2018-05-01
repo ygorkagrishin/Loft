@@ -1,5 +1,4 @@
 .caro
-    position: relative;
     width: 100%;
     overflow: hidden;
 
@@ -115,6 +114,9 @@
     p 
         @extend .caro__comp p;
         top: -5px;
+    svg 
+        width: 100% !important;
+        height: 100% !important;
 
 .js-comp-trigger,
 .js-kkal-trigger,
@@ -141,6 +143,8 @@
 .caro__arrow
     position: absolute;
     top: 48.5%;
+    z-index: 9999999;
+    width: 30px;
     cursor: pointer;
 
 .caro__prev

@@ -2,41 +2,53 @@
 'use strict';
 
 var acco = document.querySelector('#js-acco'),
-    sects = acco.getElementsByClassName('js-acco-sect');
+    sections = acco.children;
 
-function openSect(sect) {
-  for (var i=0, len=sects.length-1; i<=len; i++)
-    closeSect(sects[i]);
+function toAllCloseSections(array) {
+  for (var i=0, len=sections.length-1; i<=len; i++) {
+    var section = sections[i];
 
-  var cont = sect.querySelector('.js-acco-box'),
-      contHeight = cont.firstChild.offsetHeight + 'px';
-
-  if (!sect.classList.contains('active'))
-    sect.classList.add('active');
-
-  cont.style.height = contHeight;
+    toCloseCurrentSection(section);
+  }
 }
 
-function closeSect(sect) {
-  var cont = sect.querySelector('.js-acco-box');
-
-  if (sect.classList.contains('active'))
-    sect.classList.remove('active');
-
-  cont.removeAttribute('style');
+function toCloseCurrentSection(sect) {
+  var section = sect;
+  
+  if (section.classList.contains('active')) {
+    section.classList.remove('active');
+  }
+  var content = section.getElementsByClassName('acco__cont')[0];
+  content.parentNode.removeAttribute('style');  
 }
 
-function handler() {
-  var sect = this;
+function toOpenCurrentSection(sect) {
+  var section = sect;
 
-  !sect.classList.contains('active') ? 
-  openSect(sect) : closeSect(sect); 
+  toAllCloseSections();
+
+  if (!section.classList.contains('active')) {
+    section.classList.add('active');
+  }
+
+  var content = section.getElementsByClassName('acco__cont')[0];
+  content.parentNode.style.height = content.offsetHeight+'px';
 }
 
-for (var i=0, len=sects.length-1; i<=len; i++)
-  sects[i].addEventListener('click', handler, false);
+function handler(e) {
+  var currentSection = this;
+
+  !currentSection.classList.contains('active') ?
+  toOpenCurrentSection(currentSection) : toCloseCurrentSection(currentSection);
+}
+
+for (var i=0, len=sections.length-1; i<=len; i++) {
+  var section = sections[i];
+
+  section.addEventListener('click', handler, false);
+}
+
 })();
-
 
 /* 
     Не большая функция для вертикального аккордеона.

@@ -13,7 +13,9 @@ nav.navbar.js-navbar
         li
             a(href="javascript:void(0);", data-anchor="cont") Контакты
         .navbar__close
-            img(src="image/content/hero/close.png", alt="navbar close pic")
+            svg(width="20px", height="20px")
+                use(xlink:href="#cancel")
+            //- img(src="image/content/hero/close.png", alt="navbar close pic")
             // js navbar close 
             .js-navbar-close
             // js navbar close end

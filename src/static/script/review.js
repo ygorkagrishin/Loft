@@ -2,41 +2,37 @@
 'use strict';
 
 var data = document.querySelectorAll('[data-popup]'),
-    popup,
+    popup = document.querySelectorAll('.review__popup'),
     closePopup = document.querySelectorAll('.js-popup-close');
-    
-/* 
-    Получаем значение атрибута data-,
-    посде чего находим попап и добвляем класс active
-*/
+  
+var currentPopup;
 
 function handler(e) {
   e.preventDefault();
   
-  popup = 
-    document.querySelector(this.getAttribute('data-popup'));
+  currentPopup = document.querySelector(this.getAttribute('data-popup'));
 
-  if (!popup.classList.contains('active'))
-    return popup.classList.add('active');
+  !currentPopup.classList.contains('active') ? 
+  open(currentPopup) : close(currentPopup);
 }   
 
-/* 
-    Определяем по пременной активный попап
-    и удаляем у него класс active
-*/
+function open(modal) {
+  SCROLL = false;
 
-function close() {
-  if (popup.classList.contains('active'))
-    return popup.classList.remove('active');
+  return currentPopup.classList.add('active');
 }
 
-/* 
-    Проходим циклом по кнопкам и вешаем на них обработчики
-*/
-for ( var i=0, len=closePopup.length-1; i<=len; i++ )
+function close(modal) {
+  SCROLL = true;
+
+  return currentPopup.classList.remove('active');
+}
+
+for ( var i=0, len=closePopup.length-1; i<=len; i++ ) {
   closePopup[i].addEventListener('click', close);
+}
 
-for ( var i=0, len=data.length-1; i<=len; i++ )
+for ( var i=0, len=data.length-1; i<=len; i++ ) {
   data[i].addEventListener('click', handler);
-
+}
 })();
