@@ -1,0 +1,414 @@
+#preloader
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999999999;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center; 
+    background-color: primaryBlack;
+
+.preloader__status
+    font: 72px / 64px gagalinReg;
+    color: primaryYellow;
+    span 
+        display: inline-block;
+        animation-name: pulse;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        &:nth-child(1)
+            animation-delay: 2s;
+        &:nth-child(2)
+            animation-delay: 4s;
+        &:nth-child(3)
+            animation-delay: 6s;
+/* **************************** */
+// Hero
+/* **************************** */
+.hero
+    // background: url('image/content/hero/video-bg.png') no-repeat center / cover;
+    background: no-repeat center / cover;
+    .container
+        flex-direction: column;
+        justify-content: space-between;
+
+.hero__header
+    width: 100%;
+    margin-bottom: 28px;
+
+.hero__main
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+.hero__pic,
+.hero__desc
+    width: 50%;
+
+.hero__pic
+    position: relative;
+    padding-left: 60px;
+    img[alt="burger"]
+        width: 100%;
+    /* Подтягиваем картинку наверх */
+    .hero__helper 
+        margin-top: -140px;
+
+.hero__drops
+    position: absolute;
+    top: -24%;
+    left: 5%;
+    width: 94.5%;
+
+.hero__desc
+    align-self: flex-start;
+    padding-left: 8px;
+    margin-top: 10px;
+
+.hero__title
+    color: primaryYellow;
+    span 
+        display: inline-block;
+        margin-top: 28px;
+        font: 65px / 60px lifeHackMed;
+        letter-spacing: -1.5px;
+        color: #fff;
+
+.hero__arrow
+    width: 100%;
+    padding-bottom: 30px;
+    text-align: center;
+
+.arrow-scroll
+    overflow: visible !important;
+
+/* **************************** */
+// Hero end
+/* **************************** */
+
+
+
+/* **************************** */
+// We
+/* **************************** */
+.we
+    // background: url('image/content/we/bg1.png') no-repeat center / cover;
+    background: no-repeat center / cover;
+
+.we__title
+    padding: 74px 0;
+    text-align: center;
+
+.we__list
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 6px;
+
+.we__item
+    flex: 1;
+    text-align: center;
+    h3
+        padding: 14px 0;
+        font: 24px / 28px lifeHackMed;
+    &:not(:last-child)
+        margin-right: 12px;
+
+.we__natural
+    h3
+        padding: 26px 0 7px 0;
+
+.we__pic
+    padding: 8px 0;
+
+/* **************************** */
+// We end
+/* **************************** */
+
+
+
+/* **************************** */
+// Burger
+/* **************************** */
+.burger
+    background-color: primaryYellow;
+
+.burger__wrap
+    width: 100%;
+/* **************************** */
+// Burger end
+/* **************************** */
+
+
+
+/* **************************** */
+// Team
+/* **************************** */
+.team
+    // background: url('image/content/team/SBS_1255-X2.png') no-repeat top / cover;
+    background: no-repeat top / cover;
+
+.team__row
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+
+.team__wrap
+    width: 49%;
+    height: 100%;
+    padding: 0 79px;
+    background-color: rgba(primaryBlack,.9);
+
+.team__title
+    padding: 84px 0 73px 0;
+    color: primaryYellow;
+/* **************************** */
+// Team end
+/* **************************** */
+
+
+
+/* **************************** */
+// Menu
+/* **************************** */
+.menu
+    // background: url('image/content/menu/photo-1428660386617-8d277e7deaf2.png') no-repeat center / cover;
+    background: no-repeat center / cover;
+
+.menu__title
+    position: absolute;
+    top: 16.5%;
+    left: 8.5%;
+    z-index: 0;
+    color: #fff;
+/* **************************** */
+// Menu end
+/* **************************** */
+
+
+
+/* **************************** */
+// Review
+/* **************************** */
+.review__reviews
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+
+.review__review
+    position: relative;
+    flex: 1 0 25%;
+    color: #fff;
+    background: no-repeat center / cover;
+    filter: grayscale(100%);
+    h3
+        margin-bottom: 15px;
+        font: 14px / 28px gagalinReg;
+    p:not(:last-child)
+        margin-bottom: 12px;
+    & > .review__hover
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+.review__hover
+    padding: 41px 20px;
+    background-color: rgba(primaryBlack,.7);
+    visibility: hidden;
+
+.review__review:hover > .review__hover
+    visibility: visible;
+
+.review__popup
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(primaryBlack,.9);
+    & > div
+        position: relative;
+        max-width 460px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+    h4
+        @extend .review__review h3;
+        color: baseFontColor;
+
+.review__popup-close
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index 9999;
+    cursor: pointer;
+    svg
+        fill: primaryOrange;
+    
+.js-popup-close
+    position: absolute;
+    top: -12%;
+    left: -32%;
+    z-index: 99999;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+.btn__more_desktop_none
+    display: none;
+
+.review__popup.active
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/* **************************** */
+// Review end
+/* **************************** */
+
+
+
+/* **************************** */
+// Form
+/* **************************** */
+.form
+    // background: url('image/content/form/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.png') no-repeat center / cover;
+    background: no-repeat center / cover;
+
+.form__title
+    padding: 85px 0 76px 0;
+    text-align: center;
+    color: primaryYellow;
+
+.form__form
+    padding: 0 9px;
+
+.form__row
+    display: flex;
+    justify-content: space-between;
+    &:not(:last-child)
+        margin-bottom: 14px;
+
+.form__col
+    flex: 1;
+    &:not(:last-child)
+        margin-right: 18px;
+
+.form__name
+    margin-bottom: 2px;
+    color: #fff;
+
+.form__input
+    width: 100%;
+    padding: 10px 21px 9px 21px;
+    border: none;
+    border-radius: 5px;
+    outline-color: primaryYellow;
+
+.form__row--comment
+    margin-bottom: 7px !important;
+
+.form__comment
+    padding: 7px 21px 6px 21px;
+
+.form__row--radio,
+.form__row--checkbox
+    justify-content: flex-start;
+    & > div:not(:last-child)
+        margin-right: 20px; 
+
+.form__row--radio
+    margin-bottom: 18px !important;
+
+.form__radio,
+.form__checkbox
+    display: none;
+
+.form__radio + label::before
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+    background: #fff url('image/content/form/Ellipse.png') no-repeat -300px -300px / 47%;
+    border-radius: 50%;
+    vertical-align: -2px;
+
+.form__radio:checked + label::before
+    background: #fff url('image/content/form/Ellipse.png') no-repeat 50% 50% / 47%;
+
+.form__checkbox + label::before
+    @extend .form__radio + label::before;
+    border-radius: 0;
+    background: #fff url('image/content/form/w128h1281338911632checkmark21.png') no-repeat -300px -300px / 68%;
+
+.form__checkbox:checked + label::before
+    background: #fff url('image/content/form/w128h1281338911632checkmark21.png') no-repeat center / 68%;
+
+.form__row    
+    .form__btn
+        justify-content: flex-start;
+
+.form__answer
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+.form__answer-cont
+    width: 196px;
+    padding: 20px 19px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 46px 14px rgba(primaryBlack,0.3);
+    p
+        margin-bottom: 12px;
+
+.form__answer.active
+    display: flex;
+
+/* **************************** */
+// Form end
+/* **************************** */
+
+
+
+/* **************************** */
+// Contact
+/* **************************** */
+#map
+    width: 100%;
+    height: 100%;
+/* **************************** */
+// Contact end
+/* **************************** */
+
+.page__landscape-err
+    display: none;
+
+.page__landscape-err.active
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    text-align: center;
+    background-color: primaryBlack;
+    p
+        font: 32px / 38px gagalinReg;
+        color: primaryYellow;

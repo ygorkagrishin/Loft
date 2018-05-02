@@ -28,7 +28,7 @@ var gulp = require('gulp'),
         },
         watch: {
             pug: 'src/pug/**/*',
-            styl: 'src/static/stylus/**/**/**/*',
+            styl: 'src/static/stylus/**/**/**/**/**/*',
             script: 'src/static/script/*.js',
             image : 'src/static/image/**/**/**/*',
             fonts: 'src/static/fonts/**/*',
