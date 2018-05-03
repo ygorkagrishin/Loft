@@ -1,16 +1,34 @@
+#err-ie__table
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999999999;
+    display: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: primaryBlack;
+    .err-ie__cell
+        display: table-cell;
+        vertical-align: middle;
+    p
+        font: 14px / 24px gagalinReg;
+        color: primaryYellow;
+
 #preloader
     position: fixed;
     top: 0;
     left: 0;
     z-index: 99999999999999;
-    display: flex;
+    display: table;
     width: 100%;
     height: 100%;
-    justify-content: center;
-    align-items: center; 
+    text-align: center;
     background-color: primaryBlack;
 
 .preloader__status
+    display: table-cell;
+    vertical-align: middle;
     font: 72px / 64px gagalinReg;
     color: primaryYellow;
     span 
