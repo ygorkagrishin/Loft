@@ -1,10 +1,8 @@
 window.addEventListener('orientationchange', function() {
-    var orientation = screen.orientation || screen.msOrientation || screen.mozOrientation,
-        err = document.querySelector('.page__landscape-err');
-    
-    if (!orientation) return;
+    var orientation = window.orientation,
+    	err = document.querySelector('.landscape');
 
-    switch(orientation.angle) {
+    switch(orientation) {
         case 0:
             /* 
                 Если не произошло поворота устройства или 
@@ -13,19 +11,15 @@ window.addEventListener('orientationchange', function() {
             */
             if ( err.classList.contains('active') ) {
                 err.classList.remove('active');
-
-                SCROLL = true;
             }
             break; 
         case 90:
-            /* 
+        	/* 
                 Если происходит поворот устройства на 90 градусов, 
                 элементу устанавливается класс active.
             */
             if ( !err.classList.contains('active') ) {
                 err.classList.add('active');
-
-                SCROLL = false;
             }
             break;
         case -90: 
@@ -35,8 +29,6 @@ window.addEventListener('orientationchange', function() {
             */
             if ( !err.classList.contains('active') ) { 
                 err.classList.add('active');
-
-                SCROLL = false;
             }
             break;
     }

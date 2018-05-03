@@ -21,7 +21,6 @@ $('#js-form').on('submit', function (e) {
             if (!module.hasClass('active')) 
                 module.addClass('active');
 
-            console.log(self)
             close.on('click', function (e) {
                 e.preventDefault();
 

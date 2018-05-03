@@ -393,15 +393,12 @@
 // Contact end
 /* **************************** */
 
-.page__landscape-err
-    display: none;
-
-.page__landscape-err.active
+.landscape
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999999999;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -412,3 +409,6 @@
     p
         font: 32px / 38px gagalinReg;
         color: primaryYellow;
+
+.landscape.active
+    display: flex;

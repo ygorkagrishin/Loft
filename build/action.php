@@ -15,15 +15,14 @@ $answerCard;
 
 if ( isset( $radio ) ) {
 
-        switch( $radio ) {
-        
-            case '1':
-                $answerHading = 'v';
-            break;
-            case '2':
-                $answerCard = 'v';
-            break;
-        }
+    switch( $radio ) {
+        case '1':
+            $answerHading = 'v';
+        break;
+        case '2':
+            $answerCard = 'v';
+        break;
+    }
 
 }
 
@@ -56,22 +55,9 @@ $mail_massage = '
 
 ';
 
-$headers =  "From : Администратор сайта <admin@665.com>\r\n".
-            "MIME-Version: 1.0" . "\r\n" .
-            "Content-type : text/html; charset=UTF-8" . "\r\n";
+$headers  =  "Content-type : text/html; charset=UTF-8 \r\n";
+$headers .=  "From : Администратор сайта <admin@665.com>\r\n";
+$headers .=  "MIME-Version: 1.0 \r\n";
 
-$mail = mail( 'sir.ygorkagrishin@yandex.ru', 'Заказать', $mail_massage, $headers );
-
-$data = [];
-
-if ($mail) {
-    $data['status'] = "OK";
-    $data['mes'] = "Письмо успешно отправлено";
-} else {
-    $data['status'] = "NO";
-    $data['mes'] = "На сервере произошла ошибка";
-}
-
-echo json_encode( $data );
-
+$mail = mail('sir.ygorkagrishin@yandex.ru', 'Заказать', $mail_massage, $headers);
 ?>
