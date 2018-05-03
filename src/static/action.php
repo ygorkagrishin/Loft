@@ -1,20 +1,20 @@
 <?php
 
-   $name = $_POST[ 'name' ];
-   $phone = $_POST[ 'phone' ];
-   $street = $_POST[ 'street' ];
-   $house = $_POST[ 'house' ];
-   $build = $_POST[ 'build' ];
-   $flat = $_POST[ 'flat' ];
-   $floor = $_POST[ 'floor' ];
-   $comment = $_POST[ 'comment' ];
-   $call = isset( $_POST[ 'call' ] ) ? 'Да' : 'Нет';
-   $radio = $_POST[ 'radio' ];
-   $answerHading;
-   $answerCard;
-   
-   if ( isset( $radio ) ) {
-   
+$name = $_POST[ 'name' ];
+$phone = $_POST[ 'phone' ];
+$street = $_POST[ 'street' ];
+$house = $_POST[ 'house' ];
+$build = $_POST[ 'build' ];
+$flat = $_POST[ 'flat' ];
+$floor = $_POST[ 'floor' ];
+$comment = $_POST[ 'comment' ];
+$call = isset( $_POST[ 'call' ] ) ? 'Да' : 'Нет';
+$radio = $_POST[ 'radio' ];
+$answerHading;
+$answerCard;
+
+if ( isset( $radio ) ) {
+
         switch( $radio ) {
         
             case '1':
@@ -25,11 +25,11 @@
             break;
         }
 
-   }
+}
 
-   $mail_massage = '
-   
-   <html>
+$mail_massage = '
+
+    <html>
         <head>
             <meta charser="UTF-8">
             <title>Document</title>
@@ -52,13 +52,13 @@
                 </ul>
 
         </body>
-   </html>
-   
-   ';
+    </html>
 
-$headers = "From : Администратор сайта <admin@665.com>\r\n".
-           "MIME-Version: 1.0" . "\r\n" .
-           "Content-type : text/html; charset=UTF-8" . "\r\n";
+';
+
+$headers =  "From : Администратор сайта <admin@665.com>\r\n".
+            "MIME-Version: 1.0" . "\r\n" .
+            "Content-type : text/html; charset=UTF-8" . "\r\n";
 
 $mail = mail( 'sir.ygorkagrishin@yandex.ru', 'Заказать', $mail_massage, $headers );
 
@@ -72,6 +72,6 @@ if ($mail) {
     $data['mes'] = "На сервере произошла ошибка";
 }
 
-    echo json_encode( $data );
+echo json_encode( $data );
 
 ?>

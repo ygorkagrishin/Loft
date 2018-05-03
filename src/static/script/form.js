@@ -1,6 +1,6 @@
 var ajax = ( function () {
 
-$('#form').on('submit', function (e) {
+$('#js-form').on('submit', function (e) {
     e.preventDefault();
 
     var self = $(this),
@@ -13,25 +13,25 @@ $('#form').on('submit', function (e) {
         url: url,
         data: data,
         success: function(){
+            self.trigger('reset');
+            
             var module = $('.form__answer'),
                 close = $('.form__answer-close');
 
-            if ( !module.hasClass('active') ) 
+            if (!module.hasClass('active')) 
                 module.addClass('active');
 
+            console.log(self)
             close.on('click', function (e) {
                 e.preventDefault();
 
-                if ( module.hasClass('active') )
+                if (module.hasClass('active')) 
                     module.removeClass('active');
-
+                
                 close.off();
             });
-
-            self.trigger( 'reset' );
-        }
+        }      
     });
-
 });
 
 })();
