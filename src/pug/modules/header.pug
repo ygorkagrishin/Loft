@@ -1,14 +1,14 @@
-header.header
-    .header__logo
-        svg(width="90.265px", height="70.317px")
-            use(xlink:href="#logo")
-        //- object(data="image/svg/logo.svg", type="image/svg+xml", width="90.265px", height="70.317px", style="display:none;")          
-    .header__nav
+header
+    .header
+        .logo
+            svg(width="90.265px", height="70.317px")
+                use(xlink:href="#logo")
+            //- object(data="image/svg/logo.svg", type="image/svg+xml", width="90.265px", height="70.317px", style="display:none;")          
         include navbar
-    .header__btn
-        a(href="javascript:void(0);", data-anchor="form").btn__order Заказать
-    .header__menu   
-        span
-        // Header js-menu trigger
-        .js-menu-trig
-        // Header js-menu trigger
+        .header__btn
+            a(href="javascript:void(0);", data-anchor="form").btn__order Заказать
+        .hamburger-menu   
+            span
+            // Header js-menu trigger
+            .js-hamburger-menu-trig
+            // Header js-menu trigger

@@ -1,6 +1,6 @@
 window.addEventListener('load', function () {
     var preloader = document.querySelector('#preloader');
-    document.body.removeChild(preloader);
+    preloader.style.display = 'none';
 
     SCROLL = true;
 });

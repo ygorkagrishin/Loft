@@ -2,7 +2,7 @@
 'use strict';
 
 // Base element
-var menuIcon = document.querySelector('.js-menu-trig'),
+var menuIcon = document.querySelector('.js-hamburger-menu-trig'),
     menuMain = document.querySelector('.js-navbar'),
     menuLinks = menuMain.getElementsByTagName('a'),
     menuClose = document.querySelector('.js-navbar-close');

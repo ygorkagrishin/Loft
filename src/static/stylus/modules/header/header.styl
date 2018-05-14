@@ -1,25 +1,8 @@
+header
+    width: 100%;
+    margin-bottom: 28px;
+
 .header
     display: flex;
     align-items: center;
     padding: 6px 10px;
-    
-.header__logo
-    flex: 2;
-
-.header__menu
-    position: relative;
-    display: none;
-    margin-left: 4%;
-    span 
-        display: block;
-        width: 24px;
-        height: 4px;
-        margin: 5px 0;
-        background-color: #fff;
-        border-radius: 5px;
-    &::before
-        content: '';
-        @extend .header__menu span;
-    &::after
-        content: '';
-        @extend .header__menu span;
